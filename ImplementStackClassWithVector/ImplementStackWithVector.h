@@ -2,10 +2,13 @@
 
 #include <vector>
 
+#ifndef STACK
+#define STACK
+
 template <class T>
 class Stack {
 	private:
-		int position;
+		vector<T> a_stack;
 
 	public:
 		bool isEmpty();
@@ -14,3 +17,5 @@ class Stack {
 		int top();
 		ostream& operator<<(ostream& os, const Stack& stack);
 };
+
+#endif
