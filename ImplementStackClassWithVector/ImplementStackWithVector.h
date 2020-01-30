@@ -1,21 +1,20 @@
 #pragma once
-
 #include <vector>
+#include <fstream>
 
 #ifndef STACK
 #define STACK
 
-template <class T>
 class Stack {
 	private:
-		vector<T> a_stack;
+		std::vector<int> int_stack;
 
 	public:
 		bool isEmpty();
-		void push(T new_value);
+		void push(int new_value);
 		void pop();
 		int top();
-		ostream& operator<<(ostream& os, const Stack& stack);
+		friend std::ostream& operator<<(std::ostream& os, const Stack& stack);
 };
 
 #endif
